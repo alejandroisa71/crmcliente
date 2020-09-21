@@ -1,0 +1,32 @@
+npm init
+npm i apollo-server
+npm i -D nodemon (reinicia el servidor con los cambios)
+en el package.json cambio los scripts
+     "start": "node ." (significa que el index de entrada es el el archivo index)
+     "dev":"nodemon ." 
+http://localhost:4000/graphql para usar playground
+se crea cluster en mongodb atlas
+npm i mongoose dotenv
+npm i bcryptjs(para hassear password)
+npm i jsonwebtoken
+
+----------------------GIT---------------------------
+git init (esto se hace una sola vez)
+en gitignore se ponen los archivos que se van a ignorar(por ejemplo los .env y los node_modules)
+git status o git status -s
+git add.
+git commit -m "primer commit"
+git remote add origin https://github.com/alejandroisa71/GraphQL.git
+git push -u origin master manda losa cambios a repositorio remoto
+git pull me trae los cambios del repositorio remoto
+git log --oneline me muestra todos los commits
+git reset --hard head 7044610 me regresa al commit indicado (ojo con esto)
+
+-------------------GraphQL------------
+Mutation sirve para crear nuevos registros, modificarlos o borrarlos (requieren que se les pase informacion)
+el signo de exclamacion '!' hace obligatorio a un campo
+Se pueden definir tipos de datos personalizados (por ejemplo Token)
+Siempre que hay un Mutation nuevo hay que ir al resolver
+acceder a https://jwt.io para ver los payload
+
+video 13.1 _Creando_el_Proyecto_y_SSR_de_Next.js
