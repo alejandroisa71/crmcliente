@@ -22,11 +22,11 @@ git pull me trae los cambios del repositorio remoto
 git log --oneline me muestra todos los commits
 git reset --hard head 7044610 me regresa al commit indicado (ojo con esto)
 
--------------------GraphQL------------
-Mutation sirve para crear nuevos registros, modificarlos o borrarlos (requieren que se les pase informacion)
-el signo de exclamacion '!' hace obligatorio a un campo
-Se pueden definir tipos de datos personalizados (por ejemplo Token)
-Siempre que hay un Mutation nuevo hay que ir al resolver
-acceder a https://jwt.io para ver los payload
+-------------------Next Reacts------------
+npx create-next-app crmcliente
+import Head from 'next/head'====> sirve para agregar algo en el head
+en cdnjs/ normailize copiamos lo siguiente y pegamos en el Head====> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" />
+usamos https://tailwindcss.com/ que es similar a boostrap (no es de componentes sino de clases)
+copiamos este enlace y lo pegamos en el Head
 
-video 13.1 _Creando_el_Proyecto_y_SSR_de_Next.js
+video 13.5
