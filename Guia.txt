@@ -28,5 +28,6 @@ import Head from 'next/head'====> sirve para agregar algo en el head
 en cdnjs/ normailize copiamos lo siguiente y pegamos en el Head====> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" />
 usamos https://tailwindcss.com/ que es similar a boostrap (no es de componentes sino de clases)
 copiamos este enlace y lo pegamos en el Head
-
+Se usa formik y yup ===> npm i formik yup (formik para cuando se tiene varios formularios en el proyecto para ir leyendo loque el usuario va escribiendo  y yup para escribir un Schema de validaciones)
+Consultar github.com/jquense/yup par yup
 video 13.5
