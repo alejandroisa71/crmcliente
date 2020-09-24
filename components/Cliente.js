@@ -1,7 +1,45 @@
 import React from "react";
 import Swal from "sweetalert2";
+import { gql, useMutation } from "@apollo/client";
+
+const ELIMINAR_CLIENTE = gql`
+  mutation eliminarCliente($id: ID!) {
+    eliminarCliente(id: $id)
+  }
+`;
+const OBTENER_CLIENTES_USUARIO = gql`
+  query obtenerClientesVendedor {
+    obtenerClientesVendedor {
+      id
+      nombre
+      apellido
+      empresa
+      email
+    }
+  }
+`;
 
 const Cliente = ({ cliente }) => {
+  //Mutation para elimar Cliente
+  const [eliminarCliente] = useMutation(ELIMINAR_CLIENTE, {
+    update(cache) {
+      //obtener copia del objeto de cache
+      const { obtenerClientesVendedor } = cache.readQuery({
+        query: OBTENER_CLIENTES_USUARIO,
+      });
+
+      //Reescribir el cache
+      cache.writeQuery({
+        query: OBTENER_CLIENTES_USUARIO,
+        data: {
+          obtenerClientesVendedor: obtenerClientesVendedor.filter(
+            (clienteActual) => clienteActual.id !== id
+          ),
+        },
+      });
+    },
+  });
+
   const { id, nombre, apellido, empresa, email } = cliente;
 
   //Eliminar un cliente
@@ -15,10 +53,23 @@ const Cliente = ({ cliente }) => {
       cancelButtonColor: "#d33",
       confirmButtonText: "Si, Eliminar!",
       cancelButtonText: "No, Cancelar",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        console.log("Eliminando", id);
-        Swal.fire("Eliminado!", "Your file has been deleted.", "success");
+    }).then(async (result) => {
+      if (result.value) {
+        try {
+          //Eliminar por ID
+          const { data } = await eliminarCliente({
+            variables: {
+              id,
+            },
+          });
+          //console.log(data);
+
+          //Mostrar un alerta
+
+          Swal.fire("Eliminado!", data.eliminarCliente, "success");
+        } catch (error) {
+          console.log(error);
+        }
       }
     });
   };
@@ -45,9 +96,9 @@ const Cliente = ({ cliente }) => {
             className="w-5 h-5 ml-2"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
             />
           </svg>

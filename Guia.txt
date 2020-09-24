@@ -66,5 +66,11 @@ import {useRouter} from 'next/router' par redirigir a otra pagina
 npm i apollo-link-context
 
 
+https://github.com/tailwindlabs/heroicons para traer iconos gratis
+-------------------para alertas------------
+https://sweetalert2.github.io/ para los mensajes de alerta
+npm install sweetalert
 
-video 15.7
+
+
+video 16.3

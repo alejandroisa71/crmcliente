@@ -50,7 +50,7 @@ const Index = () => {
           </thead>
           <tbody className="bg-white">
             {data.obtenerClientesVendedor.map((cliente) => (
-              <Cliente key={Cliente.id} cliente={cliente} />
+              <Cliente key={cliente.id} cliente={cliente} />
             ))}
           </tbody>
         </table>
