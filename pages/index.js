@@ -46,6 +46,7 @@ const Index = () => {
               <th className="w-1/5 p-2 ">Empresa</th>
               <th className="w-1/5 p-2 ">Email</th>
               <th className="w-1/5 p-2 ">Eliminar</th>
+              <th className="w-1/5 p-2 ">Editar</th>
             </tr>
           </thead>
           <tbody className="bg-white">
