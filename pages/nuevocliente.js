@@ -138,7 +138,6 @@ const NuevoCliente = () => {
             ) : null}
 
             <div className="mb-4">
-              email
               <label
                 className="block text-gray-700 text-sm font-bold mb-2"
                 htmlFor="apellido"
