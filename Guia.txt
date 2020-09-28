@@ -71,6 +71,7 @@ https://github.com/tailwindlabs/heroicons para traer iconos gratis
 https://sweetalert2.github.io/ para los mensajes de alerta
 npm install sweetalert
 
+npm i react-select
 
 
 video 16.3
