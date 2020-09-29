@@ -1,6 +1,7 @@
 import Layout from "../components/Layout";
 import Link from "next/link";
-import AsignarCliente from "../components/pedidos/asignarCLiente";
+// import AsignarCliente from "../components/pedidos/asignarCliente";
+// import AsignarProductos from "../components/pedidos/AsignarProductos";
 
 const Pedidos = () => (
   <div>
@@ -11,7 +12,6 @@ const Pedidos = () => (
           Nuevo Pedido
         </a>
       </Link>
-      <AsignarCliente />
     </Layout>
   </div>
 );
