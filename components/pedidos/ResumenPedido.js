@@ -6,7 +6,7 @@ const ResumenPedido = () => {
   //Context de Pedidos
   const pedidoContext = useContext(PedidoContext);
   const { productos } = pedidoContext;
-  console.log(productos);
+  //   console.log(productos);
   return (
     <>
       <p className="mt-10 my2 bg-white border-l-4 border-gray-800 text-gray-700 p-2 text-sm font-bold">
