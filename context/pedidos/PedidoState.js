@@ -27,8 +27,16 @@ const PedidoState = ({ children }) => {
     });
   };
 
+  //Modifica los Productos
+  const agregarProducto = (productos) => {
+    dispatch({
+      type: SELECCIONAR_PRODUCTO,
+      payload: productos,
+    });
+  };
+
   return (
-    <PedidoContext.Provider value={{ agregarCliente }}>
+    <PedidoContext.Provider value={{ agregarCliente, agregarProducto }}>
       {children}
     </PedidoContext.Provider>
   );
