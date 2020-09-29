@@ -1,5 +1,3 @@
-const { createContext } = require("react");
-
 import React, { useContext } from "react";
 import PedidoContext from "../../context/pedidos/PedidoContext";
 import ProductoResumen from "./ProductoResumen";

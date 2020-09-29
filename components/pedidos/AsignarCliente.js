@@ -31,11 +31,6 @@ const AsignarCliente = () => {
   //   console.log(loading);
   //   console.log(error);
 
-  //Resultados de la consulta
-  if (loading) return null;
-
-  const { obtenerClientesVendedor } = data;
-
   useEffect(() => {
     agregarCliente(cliente);
   }, [cliente]);
@@ -43,6 +38,10 @@ const AsignarCliente = () => {
   const seleccionarCliente = (clientes) => {
     setCliente(clientes);
   };
+  //Resultados de la consulta
+  if (loading) return null;
+
+  const { obtenerClientesVendedor } = data;
   return (
     <>
       <p className="mt-10 my2 bg-white border-l-4 border-gray-800 text-gray-700 p-2 text-sm font-bold">

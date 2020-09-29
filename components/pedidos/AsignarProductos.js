@@ -3,7 +3,7 @@ import Select from "react-select";
 import { gql, useQuery } from "@apollo/client";
 import PedidoContext from "../../context/pedidos/PedidoContext";
 
-const ASIGNAR_PRODUCTOS = gql`
+const OBTENER_PRODUCTOS = gql`
   query obtenerProductos {
     obtenerProductos {
       id
@@ -23,7 +23,7 @@ const AsignarProductos = () => {
   const { agregarProducto } = pedidoContext;
 
   //Consulta a la BD
-  const { data, loading, error } = useQuery(ASIGNAR_PRODUCTOS);
+  const { data, loading, error } = useQuery(OBTENER_PRODUCTOS);
 
   useEffect(() => {
     //TODO para pasar a pedidosState.js
@@ -36,7 +36,6 @@ const AsignarProductos = () => {
   };
 
   if (loading) return null;
-
   const { obtenerProductos } = data;
 
   return (
