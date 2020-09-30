@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import Layout from "../components/Layout";
 import AsignarCliente from "../components/pedidos/AsignarCliente";
 import AsignarProductos from "../components/pedidos/AsignarProductos";
-import ProductoResumen from "../components/pedidos/ProductoResumen";
 import ResumenPedido from "../components/pedidos/ResumenPedido";
 import Total from "../components/pedidos/Total";
 import { gql, useMutation } from "@apollo/client";
