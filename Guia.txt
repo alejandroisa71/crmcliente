@@ -74,7 +74,4 @@ npm install sweetalert
 npm i react-select
 
 
-video 21.4
-
-
-video 16.3
+video 22.8
