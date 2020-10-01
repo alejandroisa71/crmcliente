@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Head>
+      <Head className="w-full sm:w-auto">
         <title>CRM - Administración de Clientes</title>
         <link
           rel="stylesheet"
